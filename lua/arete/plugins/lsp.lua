@@ -17,6 +17,8 @@ return {
         'lua_ls',
         'clangd',
         'tinymist',
+        'basedpyright',
+        'ruff',
       },
     },
     dependencies = {
