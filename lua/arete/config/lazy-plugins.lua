@@ -6,6 +6,7 @@ require('lazy').setup({
   require 'arete.plugins.snacks',
   require 'arete.plugins.mini',
   require 'arete.plugins.which-key',
+  require 'arete.plugins.todo-comments',
   require 'arete.plugins.lsp',
   require 'arete.plugins.nvim-lspconfig',
 }, {
