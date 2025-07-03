@@ -10,7 +10,7 @@ return {
       bigfile = { enabled = true },
       bufdelete = { enabled = true },
       indent = { enabled = true },
-      input = { enabled = true },
+      input = { enabled = false },
       notifier = { enabled = true },
       quickfile = { enabled = true },
       scope = { enabled = true },
