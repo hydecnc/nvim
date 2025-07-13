@@ -33,7 +33,6 @@ return {
     opts = {
       ensure_installed = {
         'stylua',
-        'typstyle',
       },
     },
   },
