@@ -66,8 +66,8 @@ opt.confirm = true
 opt.spell = true
 
 -- Performance Improvements
--- opt.redrawtime = 10000
--- opt.maxmempattern = 20000
+opt.redrawtime = 10000
+opt.maxmempattern = 20000
 
 vim.g.snacks_animate = false
 

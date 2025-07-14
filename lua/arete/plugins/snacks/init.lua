@@ -16,7 +16,16 @@ return {
       scope = { enabled = true },
       scroll = { enabled = true },
       statuscolumn = { enabled = true },
+      terminal = { enabled = true },
+      win = { enabled = true },
       words = { enabled = true },
+      styles = {
+        split = {
+          position = 'bottom',
+          height = 0.4,
+          width = 0.4,
+        },
+      },
     },
     -- stylua: ignore
     keys = {
@@ -36,4 +45,5 @@ return {
   -- Import other parts of the plugin
   require 'arete.plugins.snacks.picker',
   require 'arete.plugins.snacks.explorer',
+  require 'arete.plugins.snacks.terminal',
 }

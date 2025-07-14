@@ -12,8 +12,9 @@ map('v', 'k', 'gk', { noremap = true, silent = true })
 -- Diagnostic keymaps
 map('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open [D]iagnostic [Q]uickfix list' })
 
--- Exit terminal mode
+-- Terminal mappings
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+map('t', '<C-/>', '<cmd>close<cr>', { desc = 'Hide Terminal' })
 
 --  Use CTRL+<hjkl> to switch between windows
 map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -31,8 +32,12 @@ map('n', '<C-u>', '<C-u>zz', { desc = 'Half page up (centered)' })
 map('n', '<leader>qq', '<cmd>qa<CR>', { desc = 'Quit all' })
 
 -- Better indenting in visual mode
--- map('v', '<', '<gv', { desc = 'Indent left and reselect' })
--- map('v', '>', '>gv', { desc = 'Indent right and reselect' })
+map('v', '<', '<gv', { desc = 'Indent left and reselect' })
+map('v', '>', '>gv', { desc = 'Indent right and reselect' })
+
+-- Split keymaps
+map('n', '<leader>-', '<cmd>split<CR>', { desc = 'Split window below' })
+map('n', '<leader>|', '<cmd>vsplit<CR>', { desc = 'Split window right' })
 
 -- Buffer keymaps
 map('n', '<leader>bn', '<cmd>bnext<CR>', { desc = 'Swap to next buffer' })

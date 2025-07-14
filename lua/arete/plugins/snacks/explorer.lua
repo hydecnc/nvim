@@ -7,9 +7,7 @@ return {
     opts = {
       explorer = {
         enabled = true,
-        -- config = {
-        --   replace_netrw = true, -- Replace netrw with the snacks explorer
-        -- },
+        replace_netrw = true, -- Replace netrw with the snacks explorer
       },
     },
     keys = {
