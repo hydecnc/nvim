@@ -11,6 +11,7 @@ return {
       bufdelete = { enabled = true },
       indent = { enabled = true },
       input = { enabled = false },
+      lazygit = { enabled = false },
       notifier = { enabled = true },
       quickfile = { enabled = true },
       scope = { enabled = true },
@@ -22,7 +23,7 @@ return {
       styles = {
         split = {
           position = 'bottom',
-          height = 0.4,
+          height = 0.3,
           width = 0.4,
         },
       },

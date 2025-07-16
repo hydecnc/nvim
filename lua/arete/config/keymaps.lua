@@ -14,6 +14,7 @@ map('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open [D]iagnostic [Q
 
 -- Terminal mappings
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+map('t', '<C-e><C-t>', '<C-\\><C-n>', { desc = '[E]xit [T]erminal mode' })
 map('t', '<C-/>', '<cmd>close<cr>', { desc = 'Hide Terminal' })
 
 --  Use CTRL+<hjkl> to switch between windows
