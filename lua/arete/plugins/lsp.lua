@@ -19,6 +19,7 @@ return {
         'tinymist',
         'basedpyright',
         'ruff',
+        'marksman',
       },
     },
     dependencies = {
@@ -33,6 +34,7 @@ return {
     opts = {
       ensure_installed = {
         'stylua',
+        'prettier',
       },
     },
   },
