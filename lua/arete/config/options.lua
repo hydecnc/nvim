@@ -70,5 +70,3 @@ opt.redrawtime = 10000
 opt.maxmempattern = 20000
 
 vim.g.snacks_animate = false
-
--- vim: ts=2 sts=2 sw=2 et

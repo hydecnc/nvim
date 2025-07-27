@@ -35,6 +35,7 @@ return {
       ensure_installed = {
         'stylua',
         'prettier',
+        'clang-format',
       },
     },
   },
