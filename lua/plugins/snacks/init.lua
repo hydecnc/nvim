@@ -42,7 +42,7 @@ return {
     },
   },
   -- Import other parts of the plugin
-  require 'arete.plugins.snacks.picker',
-  require 'arete.plugins.snacks.explorer',
-  require 'arete.plugins.snacks.terminal',
+  require 'plugins.snacks.picker',
+  require 'plugins.snacks.explorer',
+  require 'plugins.snacks.terminal',
 }

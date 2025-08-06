@@ -3,9 +3,9 @@ vim.g.maplocalleader = '\\'
 
 vim.g.have_nerd_font = true
 
-require 'arete.config.options'
-require 'arete.config.user-commands'
-require 'arete.config.auto-commands'
-require 'arete.config.keymaps'
-require 'arete.config.lazy-bootstrap'
-require 'arete.config.lazy-plugins'
+require 'config.options'
+require 'config.user-commands'
+require 'config.auto-commands'
+require 'config.keymaps'
+require 'config.lazy-bootstrap'
+require 'config.lazy-plugins'
