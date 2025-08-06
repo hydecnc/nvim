@@ -1,9 +1,6 @@
 return {
   {
     'snacks.nvim',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
     opts = {
       terminal = {
         enabled = true,

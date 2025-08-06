@@ -2,9 +2,6 @@ return {
   {
     'echasnovski/mini.nvim',
     event = 'VeryLazy',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
     config = function()
       require('mini.ai').setup { n_lines = 500 }
       require('mini.surround').setup {
@@ -20,6 +17,8 @@ return {
       }
       require('mini.pairs').setup()
       require('mini.diff').setup()
+      require('mini.files').setup()
+      require('mini.icons').setup()
 
       local statusline = require 'mini.statusline'
       -- set use_icons to true if you have a Nerd Font
