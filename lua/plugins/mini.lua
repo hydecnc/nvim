@@ -32,5 +32,15 @@ return {
         return '%2l:%-2v'
       end
     end,
+    keys = {
+      {
+        '<leader>fe',
+        function()
+          MiniFiles.open()
+        end,
+        desc = 'Mini Files (cwd)',
+      },
+      { '<leader>e', '<leader>fe', desc = 'Mini Files (cwd)', remap = true },
+    },
   },
 }

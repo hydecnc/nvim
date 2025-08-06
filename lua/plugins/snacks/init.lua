@@ -43,6 +43,5 @@ return {
   },
   -- Import other parts of the plugin
   require 'plugins.snacks.picker',
-  require 'plugins.snacks.explorer',
   require 'plugins.snacks.terminal',
 }
