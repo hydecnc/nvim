@@ -28,6 +28,7 @@ return {
         'vim',
         'vimdoc',
         'ninja',
+        'typescript',
         'typst',
         'rst',
         'regex',

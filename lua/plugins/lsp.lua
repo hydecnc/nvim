@@ -18,8 +18,9 @@ return {
         'clangd',
         'tinymist',
         'basedpyright',
-        'ruff',
         'marksman',
+        'ruff',
+        'svelte',
       },
     },
     dependencies = {
