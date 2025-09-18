@@ -65,7 +65,7 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter-textobjects',
-    event = { 'BufReadPost' },
+    event = { 'BufReadPost', 'BufNewFile' },
     config = function()
       -- When in diff mode, we want to use the default
       -- vim text objects c & C instead of the treesitter ones.

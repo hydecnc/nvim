@@ -36,6 +36,8 @@ return {
         markdown = { 'prettier' },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
+        typescript = { 'prettier' },
+        cmake = { 'cmake_format' },
       },
     },
   },
