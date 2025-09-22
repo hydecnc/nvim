@@ -42,6 +42,8 @@ return {
         'prettier',
         'clang-format',
         'cmakelang',
+        'typstyle',
+        'markdownlint',
       },
     },
   },

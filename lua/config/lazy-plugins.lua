@@ -9,6 +9,7 @@ require('lazy').setup({
   require 'plugins.todo-comments',
   require 'plugins.lsp',
   require 'plugins.nvim-lspconfig',
+  require 'plugins.lint',
 }, {
   checker = {
     enabled = false,
