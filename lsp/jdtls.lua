@@ -1,0 +1,12 @@
+return {
+  settings = {
+    java = {
+      format = {
+        settings = {
+          url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
+          profile = 'GoogleStyle',
+        },
+      },
+    },
+  },
+}

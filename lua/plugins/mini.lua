@@ -15,7 +15,9 @@ return {
           update_n_lines = 'gsn', -- Update `n_lines`
         },
       }
-      require('mini.pairs').setup()
+      require('mini.pairs').setup {
+        mappings = { ['$'] = { action = 'closeopen', pair = '$$', neigh_pattern = '[^\\].', register = { cr = false } } },
+      }
       require('mini.icons').setup()
       require('mini.diff').setup()
       require('mini.jump').setup { delay = { highlight = 0 } }

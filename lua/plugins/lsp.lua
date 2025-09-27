@@ -25,6 +25,7 @@ return {
         'vtsls',
         'ruff',
         'svelte',
+        'jdtls',
       },
     },
     dependencies = {
@@ -43,7 +44,7 @@ return {
         'clang-format',
         'cmakelang',
         'typstyle',
-        'markdownlint',
+        'vale',
       },
     },
   },
