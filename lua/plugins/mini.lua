@@ -2,6 +2,7 @@ return {
   {
     'nvim-mini/mini.nvim',
     event = 'VeryLazy',
+    dependencies = 'rafamadriz/friendly-snippets',
     config = function()
       require('mini.ai').setup { n_lines = 500 }
       require('mini.surround').setup {
@@ -36,6 +37,9 @@ return {
       statusline.section_location = function()
         return '%2l:%-2v'
       end
+
+      local mini_snippets = require 'mini.snippets'
+      mini_snippets.setup { snippets = { mini_snippets.gen_loader.from_lang() } }
     end,
     keys = {
       {
@@ -48,5 +52,4 @@ return {
       { '<leader>e', '<leader>fe', desc = 'Mini Files (cwd)', remap = true },
     },
   },
-  require 'plugins.mini.snippets',
 }
