@@ -1,6 +1,6 @@
 return {
   {
-    'echasnovski/mini.nvim',
+    'nvim-mini/mini.nvim',
     event = 'VeryLazy',
     config = function()
       require('mini.ai').setup { n_lines = 500 }
@@ -48,4 +48,5 @@ return {
       { '<leader>e', '<leader>fe', desc = 'Mini Files (cwd)', remap = true },
     },
   },
+  require 'plugins.mini.snippets',
 }
