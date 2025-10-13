@@ -10,6 +10,8 @@ require('lazy').setup({
   require 'plugins.lsp',
   require 'plugins.nvim-lspconfig',
   require 'plugins.lint',
+  require 'plugins.nvim-dap',
+  require 'plugins.nvim-jdtls',
 }, {
   checker = {
     enabled = false,

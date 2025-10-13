@@ -28,6 +28,11 @@ return {
         'jdtls',
       },
     },
+    automatic_enable = {
+      exclude = {
+        'jdtls',
+      },
+    },
     dependencies = {
       { 'mason-org/mason.nvim', opts = {} },
       'neovim/nvim-lspconfig',
@@ -44,6 +49,8 @@ return {
         'clang-format',
         'cmakelang',
         'typstyle',
+        'java-debug-adapter',
+        'java-test',
         'vale',
       },
     },
