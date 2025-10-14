@@ -81,7 +81,7 @@ local config = {
       format = {
         settings = {
           -- url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
-          profile = 'Eclipse',
+          -- profile = 'GoogleStyle',
         },
       },
     },
