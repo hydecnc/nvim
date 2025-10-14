@@ -28,10 +28,14 @@ return {
       -- dap.configurations.java = {
       --   {
       --     type = 'java',
-      --     request = 'attach',
-      --     name = 'Debug (Attach) - Remote',
-      --     hostName = '127.0.0.1',
-      --     port = 5005,
+      --     request = 'Launch',
+      --     name = 'Debug Current File',
+      --     mainClass = function()
+      --       return vim.fn.input 'Main class > '
+      --     end,
+      --     projectName = function()
+      --       return vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+      --     end,
       --   },
       -- }
     end,

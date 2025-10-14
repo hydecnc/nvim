@@ -4,6 +4,7 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
       { 'j-hui/fidget.nvim', opts = {} },
+      'nvim-java/nvim-java',
     },
     config = function()
       -- Diagostic configuration

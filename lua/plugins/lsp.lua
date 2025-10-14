@@ -30,9 +30,7 @@ return {
       },
     },
     automatic_enable = {
-      exclude = {
-        'jdtls',
-      },
+      exclude = {},
     },
     dependencies = {
       { 'mason-org/mason.nvim', opts = {} },
