@@ -11,7 +11,11 @@ vim.api.nvim_create_autocmd('TermClose', {
   group = augroup,
   callback = function()
     if vim.v.event.status == 0 then
-      vim.api.nvim_buf_delete(0, {})
+      local buf = vim.api.nvim_get_current_buf()
+      -- Only delete if it's actually a terminal buffer
+      if vim.bo[buf].buftype == 'terminal' then
+        vim.api.nvim_buf_delete(buf)
+      end
     end
   end,
 })

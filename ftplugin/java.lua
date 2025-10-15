@@ -80,8 +80,8 @@ local config = {
       },
       format = {
         settings = {
-          -- url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
-          -- profile = 'GoogleStyle',
+          url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
+          profile = 'GoogleStyle',
         },
       },
     },
@@ -96,10 +96,6 @@ local config = {
 -- Starts a new client & server or attaches to an existing client & server depending on the `root_dir`.
 require('jdtls').start_or_attach(config)
 
-local dap = { hotcodereplace = 'auto', config_overrides = {} }
--- Testing options can be overridden by replacing test with a config_overrides table
-local test = true
--- Setup keymaps after jdtls is fully attached.
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -140,11 +136,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
         },
       }
 
+      local dap = { hotcodereplace = 'auto', config_overrides = {} }
       -- custom init for Java debugger
       require('jdtls').setup_dap(dap)
       -- Can set this to false to disable main class scan, which is a performance killer for large project
-      require('jdtls.dap').setup_dap_main_class_configs(false)
+      require('jdtls.dap').setup_dap_main_class_configs {}
 
+      -- Testing options can be overridden by replacing test with a config_overrides table
+      local test = true
       -- Java Test require Java debugger to work
       -- custom keymaps for Java test runner (not yet compatible with neotest)
       wk.add {
