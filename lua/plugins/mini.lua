@@ -23,13 +23,6 @@ return {
       require('mini.diff').setup()
       require('mini.jump').setup { delay = { highlight = 0 } }
 
-      require('mini.files').setup()
-      MiniFilesToggle = function(...)
-        if not MiniFiles.close() then
-          MiniFiles.open(...)
-        end
-      end
-
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = vim.g.have_nerd_font }
 
@@ -45,7 +38,7 @@ return {
       {
         '<leader>fe',
         function()
-          MiniFilesToggle()
+          require('mini.files').open()
         end,
         desc = 'Mini Files (cwd)',
       },
