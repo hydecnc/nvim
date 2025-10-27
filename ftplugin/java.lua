@@ -1,3 +1,9 @@
+-- Change indentation to 4 spaces
+vim.opt_local.shiftwidth = 4
+vim.opt_local.tabstop = 4
+vim.opt_local.softtabstop = 4
+vim.opt_local.expandtab = true
+
 local sep = package.config:sub(1, 1)
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.fn.stdpath 'data' .. sep .. 'jdtls-workspace' .. sep .. project_name
@@ -79,6 +85,8 @@ local config = {
         },
       },
       format = {
+        insertSpaces = true,
+        tabSize = 4,
         settings = {
           url = 'https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml',
           profile = 'GoogleStyle',
