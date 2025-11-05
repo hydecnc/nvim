@@ -49,7 +49,7 @@ return {
         'prettier',
         'clang-format',
         'cmakelang',
-        'typstyle',
+        -- 'typstyle',
         'java-debug-adapter',
         'java-test',
         'vale',
