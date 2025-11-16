@@ -35,7 +35,7 @@ return {
       },
     },
     dependencies = {
-      { 'mason-org/mason.nvim', opts = {} },
+      { 'mason-org/mason.nvim', opts = { PATH = 'append' } },
       'neovim/nvim-lspconfig',
     },
   },
