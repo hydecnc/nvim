@@ -1,7 +1,7 @@
 return {
   settings = {
     formatterMode = 'typstyle',
-    exportPdf = 'onType',
+    -- exportPdf = 'onType',
     semanticTokens = 'disable',
     lint = {
       enabled = true,

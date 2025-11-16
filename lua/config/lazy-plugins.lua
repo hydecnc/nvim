@@ -8,6 +8,7 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.todo-comments',
   require 'plugins.lsp',
+  require 'plugins.typst-preview',
   require 'plugins.nvim-lspconfig',
   require 'plugins.lint',
   require 'plugins.nvim-dap',
