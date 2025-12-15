@@ -24,7 +24,7 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- typst = { 'typstyle' },
+        typst = { 'typstyle' },
         python = {
           -- To fix auto-fixable lint errors.
           -- 'ruff_fix',
@@ -37,7 +37,7 @@ return {
         c = { 'clang-format' },
         cpp = { 'clang-format' },
         typescript = { 'prettier' },
-        cmake = { 'cmake_format' },
+        cmake = { 'prettier' },
       },
     },
   },

@@ -10,7 +10,6 @@ return {
           all = {
             ui = {
               bg_gutter = 'none',
-              -- bg = '#000000',
               float = {
                 bg = 'none',
               },

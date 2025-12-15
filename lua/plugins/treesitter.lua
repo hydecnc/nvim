@@ -98,14 +98,11 @@ return {
 
             keymaps = {
               -- You can use the capture groups defined in textobjects.scm
-              ['af'] = '@function.outer',
-              ['if'] = '@function.inner',
-              ['ac'] = '@class.outer',
-              -- You can optionally set descriptions to the mappings (used in the desc parameter of
-              -- nvim_buf_set_keymap) which plugins like which-key display
+              ['af'] = { query = '@function.outer', desc = 'Select outer part of a function' },
+              ['if'] = { query = '@function.inner', desc = 'Select inner part of a function' },
+              ['ac'] = { query = '@class.outer', desc = 'Select outer part of a class region' },
               ['ic'] = { query = '@class.inner', desc = 'Select inner part of a class region' },
-              -- You can also use captures from other query groups like `locals.scm`
-              ['as'] = { query = '@local.scope', query_group = 'locals', desc = 'Select language scope' },
+              ['as'] = { query = '@local.scope', desc = 'Select language scope' },
             },
           },
         },

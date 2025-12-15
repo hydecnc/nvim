@@ -48,6 +48,3 @@ end, { desc = 'Delete Buffer' })
 map('n', '<leader>bo', function()
   Snacks.bufdelete.other()
 end, { desc = 'Delete Other Buffers' })
-
--- Toggle format on save
-map('n', '<leader>tf', '<cmd>ToggleFormat<CR>', { noremap = true, desc = '[T]oggle [F]ormat' })

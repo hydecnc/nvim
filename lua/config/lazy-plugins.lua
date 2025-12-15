@@ -19,7 +19,12 @@ require('lazy').setup({
     notify = false,
   },
   performance = {
+    cache = {
+      enabled = true,
+    },
+    reset_packpath = true, -- reset the package path to improve startup time
     rtp = {
+      reset = true,
       disabled_plugins = {
         'gzip',
         -- 'matchit',
