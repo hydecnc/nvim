@@ -8,7 +8,6 @@ return {
         globals = {
           'vim',
           'require',
-          'Snacks',
         },
       },
     },
