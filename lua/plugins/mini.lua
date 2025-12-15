@@ -5,6 +5,8 @@ return {
     dependencies = 'rafamadriz/friendly-snippets',
     config = function()
       require('mini.extra').setup()
+      require('mini.icons').setup()
+      require('mini.diff').setup()
 
       local ai = require 'mini.ai'
       ai.setup {
@@ -16,21 +18,25 @@ return {
         search_method = 'cover',
       }
 
-      require('mini.surround').setup {
-        mappings = {
-          add = 'gsa', -- Add surrounding in Normal and Visual modes
-          delete = 'gsd', -- Delete surrounding
-          find = 'gsf', -- Find surrounding (to the right)
-          find_left = 'gsF', -- Find surrounding (to the left)
-          highlight = 'gsh', -- Highlight surrounding
-          replace = 'gsr', -- Replace surrounding
-          update_n_lines = 'gsn', -- Update `n_lines`
+      require('mini.surround').setup()
+      require('mini.pairs').setup()
+      require('mini.jump').setup { delay = { highlight = 0 } }
+
+      local hipatterns = require 'mini.hipatterns'
+      local hi_words = MiniExtra.gen_highlighter.words
+      hipatterns.setup {
+        highlighters = {
+          -- Highlight a fixed set of common words. Will be highlighted in any place,
+          -- not like "only in comments".
+          fixme = hi_words({ 'FIXME', 'Fixme', 'fixme' }, 'MiniHipatternsFixme'),
+          hack = hi_words({ 'HACK', 'Hack', 'hack' }, 'MiniHipatternsHack'),
+          todo = hi_words({ 'TODO', 'Todo', 'todo' }, 'MiniHipatternsTodo'),
+          note = hi_words({ 'NOTE', 'Note', 'note' }, 'MiniHipatternsNote'),
+
+          -- Highlight hex color string (#aabbcc) with that color as a background
+          hex_color = hipatterns.gen_highlighter.hex_color(),
         },
       }
-      require('mini.pairs').setup()
-      require('mini.icons').setup()
-      require('mini.diff').setup()
-      require('mini.jump').setup { delay = { highlight = 0 } }
 
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = vim.g.have_nerd_font }

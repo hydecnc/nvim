@@ -6,7 +6,6 @@ require('lazy').setup({
   require 'plugins.mini',
   -- require 'plugins.snacks',
   require 'plugins.which-key',
-  -- require 'plugins.todo-comments',
   require 'plugins.lsp',
   require 'plugins.typst-preview',
   require 'plugins.nvim-lspconfig',
