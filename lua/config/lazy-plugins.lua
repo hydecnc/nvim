@@ -4,7 +4,6 @@ require('lazy').setup({
   require 'plugins.conform',
   require 'plugins.treesitter',
   require 'plugins.mini',
-  -- require 'plugins.snacks',
   require 'plugins.which-key',
   require 'plugins.lsp',
   require 'plugins.typst-preview',

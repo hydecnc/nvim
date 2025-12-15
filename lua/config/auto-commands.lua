@@ -7,19 +7,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-local layout_util_group = vim.api.nvim_create_augroup('layout-util', { clear = true })
--- vim.api.nvim_create_autocmd('TermClose', {
---   group = layout_util_group,
---   callback = function()
---     if vim.v.event.status == 0 then
---       local buf = vim.api.nvim_get_current_buf()
---       -- Only delete if it's actually a terminal buffer
---       if vim.bo[buf].buftype == 'terminal' then
---         vim.api.nvim_buf_delete(buf, {})
---       end
---     end
---   end,
--- })
+local layout_util_group = vim.api.nvim_create_augroup('custom-terminal', { clear = true })
 
 -- Disable line numbers in terminal
 vim.api.nvim_create_autocmd('TermOpen', {
@@ -28,11 +16,3 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.opt.spell = false
   end,
 })
-
--- Auto-resize splits when window is resized
--- vim.api.nvim_create_autocmd('VimResized', {
---   group = layout_util_group,
---   callback = function()
---     vim.cmd 'tabdo wincmd ='
---   end,
--- })
