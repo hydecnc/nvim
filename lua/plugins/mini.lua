@@ -4,7 +4,18 @@ return {
     event = 'VeryLazy',
     dependencies = 'rafamadriz/friendly-snippets',
     config = function()
-      require('mini.ai').setup { n_lines = 500 }
+      require('mini.extra').setup()
+
+      local ai = require 'mini.ai'
+      ai.setup {
+        custom_textobjects = {
+          B = MiniExtra.gen_ai_spec.buffer(),
+          F = ai.gen_spec.treesitter { a = '@function.outer', i = '@function.inner' },
+          C = ai.gen_spec.treesitter { a = '@class.outer', i = '@class.inner' },
+        },
+        search_method = 'cover',
+      }
+
       require('mini.surround').setup {
         mappings = {
           add = 'gsa', -- Add surrounding in Normal and Visual modes
