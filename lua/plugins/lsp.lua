@@ -14,20 +14,7 @@ return {
     'mason-org/mason-lspconfig.nvim',
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {
-      ensure_installed = {
-        'lua_ls',
-        'clangd',
-        'cssls',
-        'tinymist',
-        'basedpyright',
-        'marksman',
-        'neocmake',
-        'tailwindcss',
-        'vtsls',
-        'ruff',
-        'svelte',
-        'jdtls',
-      },
+      ensure_installed = {},
     },
     automatic_enable = {
       exclude = {
@@ -45,11 +32,24 @@ return {
     dependencies = { 'mason-org/mason.nvim' },
     opts = {
       ensure_installed = {
+        -- LSP
+        'lua_ls',
+        'clangd',
+        'cssls',
+        'tinymist',
+        'basedpyright',
+        'marksman',
+        'neocmake',
+        'tailwindcss',
+        'vtsls',
+        'ruff',
+        'svelte',
+        'jdtls',
+        -- Linters/formatters
         'stylua',
         'prettier',
         'clang-format',
         'cmakelang',
-        -- 'typstyle',
         'java-debug-adapter',
         'java-test',
         'vale',
