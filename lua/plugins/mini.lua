@@ -90,6 +90,13 @@ return {
       { '<leader>fS', '<Cmd>Pick lsp scope="document_symbol"<CR>', desc = 'Symbols document' },
       { '<leader>fv', '<Cmd>Pick visit_paths cwd=""<CR>', desc = 'Visit paths (all)' },
       { '<leader>fV', '<Cmd>Pick visit_paths<CR>', desc = 'Visit paths (cwd)' },
+      -- stylua: ignore start
+      { "gd", function() vim.lsp.buf.definition() end, desc = "Goto Definition" },
+      { "gD", function() vim.lsp.buf.declaration() end, desc = "Goto Declaration" },
+      { "gr", function() vim.lsp.buf.references() end, nowait = true, desc = "References" },
+      { "gI", function() vim.lsp.buf.implementation() end, desc = "Goto Implementation" },
+      { "gy", function() vim.lsp.buf.type_definition() end, desc = "Goto T[y]pe Definition" },
+      -- stylua: ignore end
     },
   },
 }

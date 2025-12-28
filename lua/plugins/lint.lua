@@ -4,9 +4,7 @@ return {
     event = { 'BufWritePost', 'BufReadPost', 'InsertLeave' },
     opts = {
       events = { 'BufWritePost', 'BufReadPost', 'InsertLeave' },
-      linters_by_ft = {
-        markdown = { 'vale' },
-      },
+      linters_by_ft = {},
     },
     config = function(_, opts)
       vim.api.nvim_create_autocmd(opts.events, {
