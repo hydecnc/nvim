@@ -7,12 +7,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-local layout_util_group = vim.api.nvim_create_augroup('custom-terminal', { clear = true })
-
 -- Disable line numbers in terminal
 vim.api.nvim_create_autocmd('TermOpen', {
-  group = layout_util_group,
+  group = vim.api.nvim_create_augroup('custom-terminal', { clear = true }),
   callback = function()
     vim.opt.spell = false
+  end,
+})
+
+-- Auto-resize splits when window is resized
+vim.api.nvim_create_autocmd('VimResized', {
+  group = vim.api.nvim_create_augroup('resize-splits', { clear = true }),
+  callback = function()
+    vim.cmd 'tabdo wincmd ='
   end,
 })
