@@ -47,4 +47,3 @@ map('n', '<leader>|', '<Cmd>vsplit<CR>', { desc = 'Split window right' })
 -- Buffer keymaps
 map('n', '<leader>bn', '<Cmd>bnext<CR>', { desc = 'Swap to next buffer' })
 map('n', '<leader>bp', '<Cmd>bprevious<CR>', { desc = 'Swap to previous buffer' })
-map('n', '<leader>bd', '<Cmd>bdelete!<CR>', { desc = 'Delete Buffer' })
