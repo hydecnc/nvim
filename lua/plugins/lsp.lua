@@ -53,6 +53,7 @@ return {
         'java-debug-adapter',
         'java-test',
         'vale',
+        'kdlfmt',
       },
     },
   },

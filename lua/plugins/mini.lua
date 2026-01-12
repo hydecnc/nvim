@@ -100,8 +100,8 @@ return {
       { 'gr', function() vim.lsp.buf.references() end, nowait = true, desc = 'References' },
       { 'gI', function() vim.lsp.buf.implementation() end, desc = 'Goto Implementation' },
       { 'gy', function() vim.lsp.buf.type_definition() end, desc = 'Goto T[y]pe Definition' },
-      { 'bd', function() require('mini.bufremove').delete() end, desc = 'Delete Buffer' },
-      { 'bD', function() require('mini.bufremove').delete() end, desc = 'Delete! Buffer' },
+      { '<leader>bd', function() require('mini.bufremove').delete() end, desc = 'Delete Buffer' },
+      { '<leader>bD', function() require('mini.bufremove').delete() end, desc = 'Delete! Buffer' },
       -- stylua: ignore end
     },
   },
