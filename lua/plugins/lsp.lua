@@ -52,7 +52,6 @@ return {
         'cmakelang',
         'java-debug-adapter',
         'java-test',
-        'vale',
         'kdlfmt',
       },
     },
