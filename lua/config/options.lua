@@ -69,4 +69,5 @@ opt.spell = true
 opt.redrawtime = 10000
 opt.maxmempattern = 20000
 
--- vim.g.snacks_animate = false
+-- LSP options
+vim.lsp.log.set_level 'off'
