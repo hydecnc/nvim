@@ -7,6 +7,7 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.lsp',
   require 'plugins.typst-preview',
+  require 'plugins.markdown-preview',
   require 'plugins.nvim-lspconfig',
   require 'plugins.lint',
   require 'plugins.nvim-dap',
