@@ -23,8 +23,6 @@ return {
       }
 
       require('mini.surround').setup()
-      require('mini.pairs').setup()
-      require('mini.jump').setup { delay = { highlight = 0 } }
 
       local hipatterns = require 'mini.hipatterns'
       local hi_words = MiniExtra.gen_highlighter.words
