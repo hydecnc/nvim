@@ -1,6 +1,6 @@
 # Hyde's Neovim Configuration
 
-Personal Neovim configuration using [`lazy.nvim`](https://lazy.folke.io/).
+Personal Neovim configuration using `vim.pack`, from Neovim >=0.12.
 
 ![Setup Image](images/setup.png)
 
