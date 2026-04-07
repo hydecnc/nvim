@@ -12,6 +12,44 @@ vim.cmd.colorscheme 'kanagawa'
 require('mini.extra').setup()
 require('mini.icons').setup()
 require('mini.diff').setup()
+require('mini.pick').setup()
+local ai = require 'mini.ai'
+ai.setup {
+  custom_textobjects = {
+    B = MiniExtra.gen_ai_spec.buffer(),
+    F = ai.gen_spec.treesitter { a = '@function.outer', i = '@function.inner' },
+    C = ai.gen_spec.treesitter { a = '@class.outer', i = '@class.inner' },
+    o = ai.gen_spec.treesitter {
+      a = { '@conditional.outer', '@loop.outer' },
+      i = { '@conditional.inner', '@loop.inner' },
+    },
+  },
+  search_method = 'cover',
+}
+
+local hipatterns = require 'mini.hipatterns'
+local hi_words = MiniExtra.gen_highlighter.words
+hipatterns.setup {
+  highlighters = {
+    -- Highlight a fixed set of common words. Will be highlighted in any place,
+    -- not like "only in comments".
+    fixme = hi_words({ 'FIXME', 'Fixme', 'fixme' }, 'MiniHipatternsFixme'),
+    hack = hi_words({ 'HACK', 'Hack', 'hack' }, 'MiniHipatternsHack'),
+    todo = hi_words({ 'TODO', 'Todo', 'todo' }, 'MiniHipatternsTodo'),
+    note = hi_words({ 'NOTE', 'Note', 'note' }, 'MiniHipatternsNote'),
+
+    -- Highlight hex color string (#aabbcc) with that color as a background
+    hex_color = hipatterns.gen_highlighter.hex_color(),
+  },
+}
+
+local gen_loader = require('mini.snippets').gen_loader
+require('mini.snippets').setup {
+  snippets = {
+    gen_loader.from_file '~/.config/nvim/snippets/global.json',
+    gen_loader.from_lang(),
+  },
+}
 
 require('blink.cmp').setup {
   keymap = { preset = 'default' },
