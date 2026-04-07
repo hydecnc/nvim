@@ -1,12 +1,5 @@
 # Hyde's Neovim Configuration
 
-Personal Neovim configuration using `vim.pack`, from Neovim >=0.12.
+Personal Neovim configuration using [`vim.pack`](https://neovim.io/doc/user/pack/#vim.pack).
 
-![Setup Image](images/setup.png)
-
-## Supported languages/frameworks
-
-- C/C++
-- Java
-- Python
-- Svelte
+The configuration structure and some configs are inspired/extracted from [MiniMax](https://nvim-mini.org/MiniMax/configs/nvim-0.12/).
