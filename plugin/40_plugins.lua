@@ -7,7 +7,14 @@ vim.pack.add {
   'https://github.com/stevearc/conform.nvim',
 }
 
+require('kanagawa').setup {
+  transparent = true, -- do not set background color
+  theme = 'wave', -- Load "wave" theme
+}
 vim.cmd.colorscheme 'kanagawa'
+
+-- setup must be called before loading
+vim.cmd 'colorscheme kanagawa'
 
 require('mini.extra').setup()
 require('mini.icons').setup()
