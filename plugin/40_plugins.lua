@@ -5,6 +5,7 @@ vim.pack.add {
   'https://github.com/nvim-mini/mini.nvim',
   { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range '1.*' },
   'https://github.com/stevearc/conform.nvim',
+  { src = 'https://github.com/chomosuke/typst-preview.nvim', version = vim.version.range '1.*' },
 }
 
 require('vim._core.ui2').enable {}
@@ -12,6 +13,15 @@ require('vim._core.ui2').enable {}
 require('kanagawa').setup {
   transparent = true, -- do not set background color
   theme = 'wave', -- Load "wave" theme
+  colors = {
+    theme = {
+      all = {
+        ui = {
+          bg_gutter = 'none',
+        },
+      },
+    },
+  },
 }
 vim.cmd.colorscheme 'kanagawa'
 
@@ -99,5 +109,13 @@ require('conform').setup {
     lua = { 'stylua' },
     c = { 'clang-format' },
     cpp = { 'clang-format' },
+    python = {
+      -- To fix auto-fixable lint errors.
+      -- 'ruff_fix',
+      -- To run the Ruff formatter.
+      'ruff_format',
+      -- To organize the imports.
+      'ruff_organize_imports',
+    },
   },
 }
