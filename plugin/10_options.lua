@@ -12,6 +12,7 @@ vim.o.cmdheight = 0
 vim.o.cursorline = true
 vim.o.cursorlineopt = 'screenline,number'
 vim.o.fillchars = 'eob: ,fold:╌'
+vim.o.linebreak = true
 vim.o.list = true
 vim.o.listchars = 'extends:…,nbsp:␣,precedes:…,tab:> '
 vim.o.number = true
