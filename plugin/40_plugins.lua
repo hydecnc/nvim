@@ -1,6 +1,7 @@
 vim.pack.add {
   'https://github.com/rebelot/kanagawa.nvim',
   'https://github.com/rafamadriz/friendly-snippets',
+  'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/neovim/nvim-lspconfig',
   'https://github.com/nvim-mini/mini.nvim',
   { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range '1.*' },
@@ -28,10 +29,18 @@ vim.cmd.colorscheme 'kanagawa'
 -- setup must be called before loading
 vim.cmd 'colorscheme kanagawa'
 
+-- instal treesitter parsers and queries
+require('nvim-treesitter').install {
+  'bash',
+  'python',
+  'typst',
+}
+
+require('mini.diff').setup()
 require('mini.extra').setup()
 require('mini.icons').setup()
-require('mini.diff').setup()
 require('mini.pick').setup()
+require('mini.surround').setup()
 local ai = require 'mini.ai'
 ai.setup {
   custom_textobjects = {
