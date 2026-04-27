@@ -43,3 +43,9 @@ vim.o.softtabstop = 2
 vim.o.spelloptions = 'camel'
 vim.o.tabstop = 2
 vim.o.virtualedit = 'block'
+
+-- Folds
+vim.o.foldlevel = 10 -- Fold nothing by default; set to 0 or 1 to fold
+vim.o.foldmethod = 'indent' -- Fold based on indent level
+vim.o.foldnestmax = 10 -- Limit number of fold levels
+vim.o.foldtext = '' -- Show text under fold with its highlighting
